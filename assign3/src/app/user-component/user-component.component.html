@@ -1,0 +1,15 @@
+<h3>
+  {{childMsg}}
+</h3>
+<p>
+  Existing users are :
+</p>
+<div *ngFor="let user of users">
+
+  <p [ngClass]= "changeColor() ? 'color1' : 'color2' "> {{user}}</p>
+</div>
+<input type="button" (click)="changeColor()" value="show/Hide">
+<p *ngIf = "checkingCon">
+  {{getMsg}} 
+<p *ngIf = "!checkingCon">
+  
